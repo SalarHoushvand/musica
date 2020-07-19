@@ -31,9 +31,9 @@ class Tracks extends Component{
         }
         if(this.state.playing &&
             this.state.playingPreviewUrl === track.preview_url){
-                return <span className='play-icon'>| |</span>;
+                return <span><i className="fa fa-pause"></i></span>;
             }
-        return <span>&#9654;</span>;
+        return <span><i className="fa fa-play"></i></span>;
     }
     render(){
         const {tracks} = this.props;

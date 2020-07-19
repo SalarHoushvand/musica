@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Artist from './Artist';
 import Tracks from './Tracks';
 import Search from './Search';
+import { Button, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
+
 const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
 
 
@@ -37,10 +40,11 @@ class App extends Component {
     return (
       <div>
       <div class="logo"><b>M<span>u</span>s<span>i</span>ca</b></div>
-
+      
        <Search searchArtist={this.searchArtist}/>
        <Artist artist={this.state.artist} />
        <Tracks tracks={this.state.tracks} />
+      
       </div>
     );
   }

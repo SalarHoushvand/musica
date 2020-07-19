@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 
+
+
+
 class Search extends Component {
 
     state = {artistQuery : ''};
@@ -27,8 +30,10 @@ class Search extends Component {
                     onChange={this.updateArtistQuery} 
                     onKeyPress={this.handleKeyPress}
                     placeholder='search for an artist'/>
-                 <button className='search-btn' onClick={this.searchArtist}>Search</button>
-
+                 <button className='search-btn' onClick={this.searchArtist}><i className="fa fa-search"></i></button>
+              
+                 
+                 
             </div>
         )
     }
