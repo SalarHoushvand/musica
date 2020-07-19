@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Artist from './Artist';
 import Tracks from './Tracks';
 import Search from './Search';
-import { Button, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 
 const API_ADDRESS = 'https://spotify-api-wrapper.appspot.com';
@@ -38,14 +38,23 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <div class="logo"><b>M<span>u</span>s<span>i</span>ca</b></div>
+      <Container fluid>
+        <Row className='align-middle'>
+          <Col>
+        <div class="logo"><b>M<span>u</span>s<span>i</span>ca</b></div>
+          </Col>
+
+          <Col style={{textAlign:'right'}}>
+           <Search searchArtist={this.searchArtist}/>
+          </Col>
+        </Row>
+     
+        
       
-       <Search searchArtist={this.searchArtist}/>
        <Artist artist={this.state.artist} />
        <Tracks tracks={this.state.tracks} />
       
-      </div>
+      </Container>
     );
   }
 }

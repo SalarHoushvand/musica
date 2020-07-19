@@ -41,6 +41,15 @@ h1, h2, h3, h4, h5 {
   font-family: 'EconomicaBold';
 }
 
+.artist-title{
+  font-size: 3em;
+}
+
+.align-middle{
+  display: flex;
+  align-items: center;
+}
+
 
 
 
@@ -101,13 +110,22 @@ opacity: 0.5;
 opacity: 0.8;
 }
 
+.artist-pic{
+  float: right;
+}
+
+.artist-info{
+  justify-content: left;
+}
+
+
 /* Neon Logo ----------------------------*/
 
 .logo {
   
   font-family: "Vibur";
   font-size: 80px;
-  text-align: center;
+  text-align: left;
   position: relative;
   margin: 30px;
   top: 0;
