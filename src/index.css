@@ -46,9 +46,32 @@ h1, h2, h3, h4, h5 {
 }
 
 .align-middle{
-  display: flex;
+  
   align-items: center;
 }
+
+.artist-info{
+  text-align: left;
+  padding-top: 50px;
+}
+
+.artist-image{
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .artist-info{
+    text-align: center;
+    padding-top: 10px;
+  }
+  .artist-image{
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
 
 
 
@@ -60,7 +83,10 @@ h1, h2, h3, h4, h5 {
   display: inline-block;
   margin: 20px;
   cursor:pointer;
+ 
 }
+
+
 
 
 
@@ -74,10 +100,12 @@ h1, h2, h3, h4, h5 {
 @media only screen and (max-width: 600px) {
   .track{
     position: relative;
-    display: flex;
+    display: flexbox;
     width: auto;
     height: auto;
+    text-align: center;
   }
+  
 }
 .track-text{
   position: absolute;
@@ -110,13 +138,7 @@ opacity: 0.5;
 opacity: 0.8;
 }
 
-.artist-pic{
-  float: right;
-}
 
-.artist-info{
-  justify-content: left;
-}
 
 
 /* Neon Logo ----------------------------*/
@@ -125,7 +147,7 @@ opacity: 0.8;
   
   font-family: "Vibur";
   font-size: 80px;
-  text-align: left;
+  text-align: center;
   position: relative;
   margin: 30px;
   top: 0;

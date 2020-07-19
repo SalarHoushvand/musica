@@ -40,11 +40,11 @@ class App extends Component {
     return (
       <Container fluid>
         <Row className='align-middle'>
-          <Col>
+          <Col md>
         <div class="logo"><b>M<span>u</span>s<span>i</span>ca</b></div>
           </Col>
 
-          <Col style={{textAlign:'right'}}>
+          <Col md >
            <Search searchArtist={this.searchArtist}/>
           </Col>
         </Row>
@@ -52,7 +52,7 @@ class App extends Component {
         
       
        <Artist artist={this.state.artist} />
-       <Tracks tracks={this.state.tracks} />
+       <Tracks className='tracks' tracks={this.state.tracks} />
       
       </Container>
     );

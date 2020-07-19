@@ -14,11 +14,10 @@ const Artist = ({ artist }) => {
                 }}>
 
                 
-            <Col>
+            <Col className="align-middle artist-image">
                     <img 
             src={images[0] && images[0].url} 
             alt="artist profile"
-            className='artist-pic'
             style={{
                 width:300,
                 height:300,
@@ -30,7 +29,7 @@ const Artist = ({ artist }) => {
 
 
 
-            <Col className="align-middle artist-info">
+            <Col className="align-middle artist-info" style={{display:'inline'}}>
             <div>
             <h1 className='artist-title'>{name}</h1>
             <p className='follower-text'>{followers.total} followers</p>

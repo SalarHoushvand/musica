@@ -44608,10 +44608,11 @@ var Artist = function Artist(_ref) {
       paddingBottom: 20,
       paddingTop: 20
     }
-  }, /*#__PURE__*/_react.default.createElement(_reactstrap.Col, null, /*#__PURE__*/_react.default.createElement("img", {
+  }, /*#__PURE__*/_react.default.createElement(_reactstrap.Col, {
+    className: "align-middle artist-image"
+  }, /*#__PURE__*/_react.default.createElement("img", {
     src: images[0] && images[0].url,
     alt: "artist profile",
-    className: "artist-pic",
     style: {
       width: 300,
       height: 300,
@@ -44619,7 +44620,10 @@ var Artist = function Artist(_ref) {
       objectFit: 'cover'
     }
   })), /*#__PURE__*/_react.default.createElement(_reactstrap.Col, {
-    className: "align-middle artist-info"
+    className: "align-middle artist-info",
+    style: {
+      display: 'inline'
+    }
   }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", {
     className: "artist-title"
   }, name), /*#__PURE__*/_react.default.createElement("p", {
@@ -44984,17 +44988,18 @@ var App = /*#__PURE__*/function (_Component) {
         fluid: true
       }, /*#__PURE__*/_react.default.createElement(_reactstrap.Row, {
         className: "align-middle"
-      }, /*#__PURE__*/_react.default.createElement(_reactstrap.Col, null, /*#__PURE__*/_react.default.createElement("div", {
+      }, /*#__PURE__*/_react.default.createElement(_reactstrap.Col, {
+        md: true
+      }, /*#__PURE__*/_react.default.createElement("div", {
         class: "logo"
       }, /*#__PURE__*/_react.default.createElement("b", null, "M", /*#__PURE__*/_react.default.createElement("span", null, "u"), "s", /*#__PURE__*/_react.default.createElement("span", null, "i"), "ca"))), /*#__PURE__*/_react.default.createElement(_reactstrap.Col, {
-        style: {
-          textAlign: 'right'
-        }
+        md: true
       }, /*#__PURE__*/_react.default.createElement(_Search.default, {
         searchArtist: this.searchArtist
       }))), /*#__PURE__*/_react.default.createElement(_Artist.default, {
         artist: this.state.artist
       }), /*#__PURE__*/_react.default.createElement(_Tracks.default, {
+        className: "tracks",
         tracks: this.state.tracks
       }));
     }
